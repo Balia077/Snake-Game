@@ -10,20 +10,16 @@ html, body{
 }
 
 :root{
+    /* Background colors */
+    --bg-primary-color: #1c1c1c;
 
-    /* Background Color */
-
-    --backgroud-color : #202020;
-
-    /* Text Color */
-
-    --color : #e8e8e8;
-
-    /* Spacing */
-
+    /* Text Colors */
+    --text-primary-color: #f0f0f0;
 }
 
 html{
-    background-color: var(--backgroud-color);
-    color: var(--color);
+    background-color: var(--bg-primary-color);
+    color: var(--text-primary-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
