@@ -26,7 +26,7 @@ html, body{
     --space-3xl: 48px;
 
     /* Border Colors */
-    --border-primary-color: #333333;
+    --border-primary-color: #525252;
 
     /* Border Radius */
     --border-radius-xs: 4px;
@@ -50,6 +50,9 @@ main, section{
 
 section{
     padding: var(--space-2xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
 }
 
 section .infos{
@@ -60,6 +63,11 @@ section .infos{
 
 .info{
     padding: var(--space-sm) var(--space-md);
-    border: 1px solid var(--border-primary-color);
-    border-radius: var();
+    border: 2px solid var(--border-primary-color);
+    border-radius: var(--border-radius-sm);
+}
+
+.board{
+    border: 2px solid var(--border-primary-color);
+    flex-grow: 1;
 }
