@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+:root{
+
+    /* Background Color */
+
+    --backgroud-color : #202020;
+
+    /* Text Color */
+
+    --color : #e8e8e8;
+
+    /* Spacing */
+
+}
+
+html{
+    background-color: var(--backgroud-color);
+    color: var(--color);
+}
