@@ -5,8 +5,16 @@ const startGameModal = document.querySelector('.start-game');
 const gameOverModal = document.querySelector('.game-over');
 const restartButton = document.querySelector('.btn-restart');
 
+const highScoreElement = document.querySelector('#high-score');
+const scoreElemet = document.querySelector('#score');
+const timeElement = document.querySelector('#time');
+
 const blockHeight = 30
 const blockWidth = 30
+
+let highScore = 0;
+let score = 0;
+let time = `00-00`
 
 const cols = Math.floor(board.clientWidth / blockWidth);
 const rows = Math.floor(board.clientHeight / blockHeight);
@@ -60,8 +68,15 @@ function render(){
         blocks[`${food.x}-${food.y}`].classList.remove('food');
         food = {x: Math.floor(Math.random() * rows), y: Math.floor(Math.random() * cols)};
         blocks[`${food.x}-${food.y}`].classList.add('food');
-
         snake.unshift(head)
+
+        score += 10;
+        scoreElemet.innerText = score;
+        if(score > highScore){
+            highScore = score;
+            localStorage.setItem('highScore', highScore);
+            highScoreElement.innerText = highScore;
+        }
     }
 
     snake.forEach(segment => {
@@ -93,6 +108,12 @@ function restartGame(){
     snake.forEach(segment => {
         blocks[`${segment.x}-${segment.y}`].classList.remove('fill');
     })
+
+    score = 0;
+    scoreElemet.innerText = score;
+    time = `00-00`;
+    timeElement.innerText = time;
+
     modal.style.display = 'none';
     direction = 'down';
     snake = [{x: 1, y: 3}]
