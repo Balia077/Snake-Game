@@ -97,7 +97,7 @@ function render(){
 
 startButton.addEventListener('click', () => {
     modal.style.display = 'none';
-    intervalId = setInterval(() => {render()},300)
+    intervalId = setInterval(() => {render()},100)
     timerIntervalId = setInterval(() => {
         let [min, sec] = time.split('-').map(Number);
         if(sec === 59){
