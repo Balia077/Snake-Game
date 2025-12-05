@@ -131,7 +131,7 @@ function restartGame(){
     direction = 'down';
     snake = [{x: 1, y: 3}]
     food = {x: Math.floor(Math.random() * rows), y: Math.floor(Math.random() * cols)}
-    intervalId = setInterval(() => {render()},300)
+    intervalId = setInterval(() => {render()},50)
 }
 
 
